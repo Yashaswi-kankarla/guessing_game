@@ -1,8 +1,7 @@
 from tkinter import *
 import time
 import random
-import tkinter as tk
-    
+import tkinter as tk   
 def game_piece():
     backg=tk.Tk()
     backg.title("GUESS IT!")
