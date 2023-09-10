@@ -2,11 +2,13 @@ from tkinter import *
 import time
 import random
 import tkinter as tk
-def game_piece():
+def New_window():
     backg=tk.Tk()
     backg.title("GUESS IT!")
     backg.geometry("900x500+250+120")
     backg.configure(background="mediumpurple1")
+def game_piece():
+    New_window()
     used=IntVar()
     tk.Label(backg,text="Hey! Let's start the game",font='Comic_Sans_MS 30 italic',bg="mediumpurple1",padx=215,pady=25,justify="center").grid(row=0,columnspan=2,column=0)
     tk.Label(backg,text="Enter the number that you want to guess\n remember from 1 to 100",bg="mediumpurple1",font="Times 20").grid(row=1,column=0,columnspan=2)
@@ -32,10 +34,7 @@ def game_piece():
     outputs=tk.Label(backg,bg="White",font="Comic_Sans_MS 15 bold ",height=9,width=30,relief="ridge").grid(row=3)
     backg.mainloop()
 def Welcome_note():
-    backg=tk.Tk()
-    backg.title("GUESS IT!")
-    backg.geometry("900x500+250+120")
-    backg.configure(background="mediumpurple1")
+    New_Window()
     def Next_frame():
         backg.destroy()
         game_piece()
